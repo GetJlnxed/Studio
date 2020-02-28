@@ -185,6 +185,12 @@ html {
   color: var(--primary-text-heading-color);
   font-weight: 700;
   text-align: center;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.contentContainer__paragraph.hidden {
+  opacity: 0;
 }
 
 .contentContainer__inner {
