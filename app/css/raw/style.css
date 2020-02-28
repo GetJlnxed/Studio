@@ -18,6 +18,7 @@
   --primary-text-color: #ffffff;
   --primary-text-heading-color: #4c4c4c;
   --secondary-text-color: #b0b0b0;
+  --selected-text-color: #00cfec;
 
   --nav-text-size: 14px;
   --regular-text-size: 20px;
@@ -225,12 +226,24 @@ html {
 .menu__item {
   width: 100%;
   height: 45px;
-  background-color: #fff;
-  transition: 0.5s;
+  transition: color 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text-color);
+  font-size: 2em;
 }
 
 .menu__item.active {
-  background-color: blue;
+  color: var(--selected-text-color);
+}
+
+.menu__item:nth-of-type(1) {
+  margin-bottom: 50%;
+}
+
+.menu__item img {
+  width: 100%;
 }
 
 
