@@ -160,6 +160,10 @@ html {
   box-sizing: border-box;
 }
 
+.contentContainer.vertical {
+  flex-flow: column nowrap;
+}
+
 .contentContainer__heading {
   position: absolute;
   margin: auto;
@@ -186,6 +190,10 @@ html {
 .contentContainer__inner {
   display: flex;
   z-index: 2;
+}
+
+.contentContainer__inner.vertical {
+  flex-flow: column nowrap;
 }
 
 .contentContainer__cornerStroke {
@@ -277,13 +285,12 @@ html {
 /* 2nd slide  About*/
 
 .aboutSlide__contentContainer {
-  flex-flow: column nowrap;
   justify-content: space-between;
-
 }
 
 .aboutSlide__contentContainer .contentContainer__inner {
   align-items: center;
+  justify-content: space-between;
 }
 
 .aboutSlide .contentCard {
