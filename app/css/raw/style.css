@@ -269,10 +269,6 @@ html {
   color: var(--selected-text-color);
 }
 
-.menu__item:nth-of-type(1) {
-  margin-bottom: 50%;
-}
-
 .menu__item img {
   width: 100%;
 }
