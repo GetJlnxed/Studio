@@ -31,7 +31,8 @@ gulp.task('browserSync', function () {
   browserSync.init({
     server: {
       baseDir: "./app"
-  }
+    },
+    browser: "Chromium"
   });
 });
 
@@ -40,8 +41,8 @@ gulp.task('browserSync', function () {
 // JS
 
 gulp.task('cleanJS', async function () {
-  return del.sync('app/js/*.min.js')
-})
+  return del.sync('app/js/*.min.js');
+});
 
 gulp.task('minJS', function () {
   return pipeline(
@@ -57,6 +58,10 @@ gulp.task('minJS', function () {
   );
 });
 
+gulp.task('minJsPlugins', function () {
+
+});
+
 gulp.task('formatJS', gulp.parallel('cleanJS', 'minJS'));
 
 
@@ -64,8 +69,8 @@ gulp.task('formatJS', gulp.parallel('cleanJS', 'minJS'));
 // CSS
 
 gulp.task('cleanCSS', async function () {
-  return del.sync('app/css/*.min.css')
-})
+  return del.sync('app/css/*.min.css');
+});
 
 gulp.task('minCSS', function () {
   return pipeline(

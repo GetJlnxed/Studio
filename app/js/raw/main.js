@@ -1,3 +1,6 @@
+import '../vendor/magic-slider.js';
+
+
 $(document).ready(function () {
   $('#fullpage').fullpage({
     autoScrolling: true,
@@ -19,4 +22,7 @@ $(document).ready(function () {
 
   //methods
   $.fn.fullpage.setAllowScrolling(true);
-})
+});
+
+
+new Magic('slide', 'hover', 'onMouse');
